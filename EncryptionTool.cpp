@@ -6,6 +6,9 @@
 int main()
 {
     std::cout << "Encryption Tool\n";
+
+    std::cout << "Press Enter to continue..."; 
+    std::cin.get(); 
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
