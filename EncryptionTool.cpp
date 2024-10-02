@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include "encryption.h"
 
 int main()
 {
@@ -20,6 +21,16 @@ int main()
 
     std::cout << "Enter output file path: ";
     std::cin >> outputFilePath;
+
+    if (choice == 1) {
+        encryptFile(inputFilePath, outputFilePath);
+    }
+    else if (choice == 2) {
+        decryptFile(inputFilePath, outputFilePath);
+    }
+    else {
+        std::cout << "Invalid choice!";
+    }
 
     return 0;
 }
