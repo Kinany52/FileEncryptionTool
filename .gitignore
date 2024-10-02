@@ -1,7 +1,9 @@
 # Build directories
 /Debug/
 /Release/
-/x64/
+
+# Output directories
+/EncryptionTool/x64/
 
 # Visual Studio files
 *.vcxproj.user
