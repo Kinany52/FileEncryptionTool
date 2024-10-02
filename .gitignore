@@ -1,0 +1,12 @@
+# Build directories
+/Debug/
+/Release/
+
+# Visual Studio files
+*.vcxproj.user
+*.suo
+*.log
+*.obj
+*.exe
+*.pdb
+.vs/
