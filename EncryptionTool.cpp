@@ -2,13 +2,26 @@
 //
 
 #include <iostream>
+#include <string>
 
 int main()
 {
-    std::cout << "Encryption Tool\n";
+    int choice;
+    std::string inputFilePath, outputFilePath;
 
-    std::cout << "Press Enter to continue..."; 
-    std::cin.get(); 
+    std::cout << "File Encryption/Decryption Tool\n";
+    std::cout << "1. Encrypt a file\n";
+    std::cout << "2. Decrypt a file\n";
+    std::cout << "Enter your choice: ";
+    std::cin >> choice;
+
+    std::cout << "Enter input file path: ";
+    std::cin >> inputFilePath;
+
+    std::cout << "Enter output file path: ";
+    std::cin >> outputFilePath;
+
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
