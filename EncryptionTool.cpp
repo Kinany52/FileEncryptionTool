@@ -23,15 +23,20 @@ int main()
     std::cin >> outputFilePath;
 
     if (choice == 1) {
+        std::cout << "Starting encryption..." << std::endl;
         encryptFile(inputFilePath, outputFilePath);
     }
     else if (choice == 2) {
+        std::cout << "Starting decryption..." << std::endl;
         decryptFile(inputFilePath, outputFilePath);
     }
     else {
         std::cout << "Invalid choice!";
     }
-
+    
+    std::cin.get(); // pauses the console window until a key is pressed
+    std::cin.get(); // second call to pause the console window until a key (Enter) is pressed
+    
     return 0;
 }
 
