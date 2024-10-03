@@ -1,10 +1,20 @@
 #include "encryption.h"
-#include <iostream>
+#include <fstream>
 
 void encryptFile(const std::string& inputFile, const std::string& outputFile) {
-    std::cout << "Encrypting " << inputFile << " to " << outputFile << std::endl;
+    std::ifstream inFile(inputFile);
+    std::ofstream outFile(outputFile);
+    char ch;
+
+    while (inFile.get(ch)) {
+        ch = ch ^ 0xAA; // XOR encryption
+        outFile.put(ch);
+    }
 }
 
 void decryptFile(const std::string& inputFile, const std::string& outputFile) {
-    std::cout << "Decrypting " << inputFile << " to " << outputFile << std::endl;
+    encryptFile(inputFile, outputFile); // XOR decryption (same as encryption, 
+    //because XOR encryption is a symmetric algorithm. 
+    //This means that applying XOR twice with the same key reverses the operation, 
+    //effectively decrypting the data.)
 }
